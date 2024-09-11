@@ -114,6 +114,7 @@ jobs:
             echo "::set-output name=appId::$(echo "$output" | jq -r '.appId')"
             echo "::set-output name=appVerId::$(echo "$output" | jq -r '.appVerId')"
           else
+            output=$(python3 ipatool-py/main.py purchase -b com.apple.FinalCutApp
             echo "Unknown Operation: $op"
           fi
         shell: bash
